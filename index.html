@@ -12,14 +12,14 @@
       --gold:#d6b24a;
       --bg:#0b0b0c;
       --muted:#bdbdbd;
-      --wall: url('assets/mural_wall.jpg');
+      --wall: url('assets/grunge-texture.webp');
     }
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, sans-serif; background:#0b0b0c;color:#eee;cursor:url('assets/spraycan_cursor.png'), auto;}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, sans-serif; background:#0b0b0c;color:#eee;cursor:url('assets/spray-cursor.png'), auto;}
     body::before{
       content:'';
       position:fixed;
       top:0;left:0;right:0;bottom:0;
-      background:url('assets/graffiti_bg.png') repeat;
+      background:url('assets/grunge-edge.png') repeat;
       opacity:0.07;
       pointer-events:none;
       z-index:-1;
@@ -43,7 +43,8 @@
     .promo-lineup-poster img{width:200px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.7))}
     .poster-name{font-family:'Permanent Marker', cursive;font-size:26px;color:#fff;margin-top:10px;text-shadow:0 0 8px var(--neon-green),0 0 14px var(--neon-purple)}
     .full-crew-banner{text-align:center;margin-top:50px}
-    .full-crew-banner img{width:100%;max-width:950px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.7))}
+    .full-crew-banner .crew-collage{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+    .full-crew-banner img{width:100%;max-width:220px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.7));border-radius:16px;background:rgba(0,0,0,0.35);padding:12px}
     .crew-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px}
     .crew-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:20px;border-radius:12px;text-align:center;transition:transform 0.2s ease, box-shadow 0.2s ease}
     .crew-card:hover{transform:translateY(-5px);box-shadow:0 0 15px var(--neon-green)}
@@ -63,7 +64,7 @@
   <div class="container">
     <header>
       <div class="logo">
-        <img src="assets/dck_coin_tag.png" alt="DCK$" />
+        <img src="assets/brand/dcks-ticker.png" alt="DCK$" />
         <div>
           <div style="font-weight:900;font-size:18px">DIGITAL CURRENCY KID$</div>
           <div style="font-size:12px;color:var(--muted);margin-top:2px">Graffiti on the face of finance</div>
@@ -93,26 +94,31 @@
     <!-- PROMO LINEUP POSTER -->
     <section class="promo-lineup-poster">
       <div>
-        <img src="assets/goldie.png" alt="Goldie">
+        <img src="assets/mascots/goldie.png" alt="Goldie">
         <div class="poster-name">Goldie</div>
       </div>
       <div>
-        <img src="assets/thic_silver.png" alt="Thic Silver">
+        <img src="assets/mascots/thicsilver.png" alt="Thic Silver">
         <div class="poster-name">Thic Silver</div>
       </div>
       <div>
-        <img src="assets/dimez.png" alt="Dimez">
+        <img src="assets/mascots/dimez.png" alt="Dimez">
         <div class="poster-name">Dimez</div>
       </div>
       <div>
-        <img src="assets/big_bronze.png" alt="Big Bronze">
+        <img src="assets/mascots/bronze.png" alt="Big Bronze">
         <div class="poster-name">Big Bronze</div>
       </div>
     </section>
 
     <!-- FULL CREW BANNER -->
     <section class="full-crew-banner">
-      <img src="assets/full_crew.png" alt="Digital Currency Kid$ Crew">
+      <div class="crew-collage">
+        <img src="assets/mascots/goldie.png" alt="Goldie">
+        <img src="assets/mascots/thicsilver.png" alt="Thic Silver">
+        <img src="assets/mascots/dimez.png" alt="Dimez">
+        <img src="assets/mascots/bronze.png" alt="Big Bronze">
+      </div>
     </section>
 
     <!-- CREW -->
@@ -120,25 +126,25 @@
       <h2>Meet the Crew</h2>
       <div class="crew-grid">
         <div class="crew-card">
-          <img src="assets/goldie.png" alt="Goldie">
+          <img src="assets/mascots/goldie.png" alt="Goldie">
           <div class="crew-name-banner">Goldie</div>
           <div class="crew-quote">"Tag it in gold, stack it in code."</div>
           <p>The Hustler — From tagging alleys to flipping tokens, Goldie runs the playbook and keeps the crew chasing bigger wins.</p>
         </div>
         <div class="crew-card">
-          <img src="assets/thic_silver.png" alt="Thic Silver">
+          <img src="assets/mascots/thicsilver.png" alt="Thic Silver">
           <div class="crew-name-banner">Thic Silver</div>
           <div class="crew-quote">"Brains, beauty, and blockchain."</div>
           <p>The Shadow — Sleek strategist with Solana cap, sharp moves, and curves that flip the game. The brains holding the crew together.</p>
         </div>
         <div class="crew-card">
-          <img src="assets/dimez.png" alt="Dimez">
+          <img src="assets/mascots/dimez.png" alt="Dimez">
           <div class="crew-name-banner">Dimez</div>
           <div class="crew-quote">"Count it twice, flip it once."</div>
           <p>The Plug — Cash in hand, beanie low. From stacking dimes to running plays, Dimez is the plug who keeps the crew supplied.</p>
         </div>
         <div class="crew-card">
-          <img src="assets/big_bronze.png" alt="Big Bronze">
+          <img src="assets/mascots/bronze.png" alt="Big Bronze">
           <div class="crew-name-banner">Big Bronze</div>
           <div class="crew-quote">"Stronger than steel, solid as Sol."</div>
           <p>The Muscle — Oversized, rocking Jordans, DCK$ tat under his eye. The block in blockchain, solid and loyal to the end.</p>
