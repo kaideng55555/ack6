@@ -2,42 +2,423 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DCK$ — Digital Currency Kid$ | dcktoken.com</title>
-  <meta name="description" content="DCK$ • Digital Currency Kid$ • From the streets: couture graffiti • hip‑hop • EDM • crypto culture. Official site: dcktoken.com" />
-  <link rel="canonical" href="https://dcktoken.com" />
-  <meta property="og:site_name" content="DCK$ — Digital Currency Kid$" />
-  <meta property="og:title" content="DCK$ — Digital Currency Kid$" />
-  <meta property="og:description" content="From the block to holding down the blockchain. Official site: dcktoken.com" />
-  <meta property="og:url" content="https://dcktoken.com" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DCK$ — Digital Currency Kid$" />
-  <meta name="twitter:description" content="From the block to holding down the blockchain. Official site: dcktoken.com" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DIGITAL CURRENCY KID$ — Official Site</title>
+  <meta name="description" content="DIGITAL CURRENCY KID$ • Graffiti on the face of finance. The first graffiti-inspired crypto crew blending neon tags, hip-hop energy, and tokenized art." />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-  <meta property="og:image" content="/assets/brand/og-image.png" />
-  <meta name="twitter:image" content="/assets/brand/og-image.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Bangers&display=swap" rel="stylesheet">
+  <meta property="og:site_name" content="DIGITAL CURRENCY KID$" />
+  <meta property="og:title" content="DIGITAL CURRENCY KID$ — Official Site" />
+  <meta property="og:description" content="From spray cans to blockchains — the graffiti-inspired crypto crew flipping the system with neon tags and tokenized art." />
+  <meta property="og:url" content="https://dcktoken.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dcktoken.com/assets/brand/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DIGITAL CURRENCY KID$ — Official Site" />
+  <meta name="twitter:description" content="From spray cans to blockchains — the graffiti-inspired crypto crew flipping the system with neon tags and tokenized art." />
+  <meta name="twitter:image" content="https://dcktoken.com/assets/brand/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
-    :root{--ink:#0f0f10;--neon1:#39ff14;--neon2:#ff2ebd;--neon3:#f9ff00;--gold:#f5c542;--bronze:#cd7f32;--silver:#c0c0c0;--dime:#8fd1ff;}
-    html,body{height:100%;background:#0b0b0c;color:#eaeaf0}
-    .font-tag{font-family:'Rubik Wet Paint',system-ui,sans-serif}
-    .font-body{font-family:'Bangers',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;letter-spacing:.3px}
+    :root {
+      --neon-green: #00ff9a;
+      --neon-purple: #b94cff;
+      --gold: #d6b24a;
+      --bg: #0b0b0c;
+      --muted: #bdbdbd;
+      --wall: url('assets/brand/dcktoken_banner_1500x500.png');
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: #eee;
+      cursor: url('assets/spray-cursor.png') 8 8, auto;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('assets/grunge-texture.webp') repeat;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: -1;
+    }
+    a {
+      color: var(--neon-green);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      gap: 1.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--neon-green);
+      text-shadow: 0 0 6px var(--neon-purple);
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-image: var(--wall);
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 8px var(--neon-purple), 0 0 16px var(--neon-green);
+      letter-spacing: 1px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 12px auto;
+      color: var(--muted);
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+    .hero-ctas {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .btn {
+      background: linear-gradient(90deg, var(--neon-green), var(--neon-purple));
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      color: var(--bg);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px var(--neon-green), 0 0 18px var(--neon-purple);
+    }
+    section {
+      margin-top: 60px;
+    }
+    h2 {
+      font-size: clamp(1.875rem, 4vw, 2.5rem);
+      margin-bottom: 16px;
+    }
+    p {
+      line-height: 1.7;
+    }
+    .promo-lineup-poster {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: center;
+    }
+    .promo-lineup-poster img {
+      width: 200px;
+      height: auto;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7));
+    }
+    .poster-name {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 26px;
+      color: #fff;
+      margin-top: 10px;
+      text-shadow: 0 0 8px var(--neon-green), 0 0 14px var(--neon-purple);
+    }
+    .full-crew-banner {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .full-crew-banner img {
+      width: 100%;
+      max-width: 950px;
+      border-radius: 14px;
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.7));
+    }
+    .crew-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .crew-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .crew-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+    .crew-card img {
+      width: 100%;
+      max-width: 160px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    .crew-name-banner {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 22px;
+      color: #fff;
+      text-shadow: 0 0 8px var(--neon-green), 0 0 12px var(--neon-purple);
+    }
+    .crew-quote {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 16px;
+      color: var(--neon-purple);
+      margin: 6px 0;
+    }
+    .roadmap ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .roadmap li {
+      margin: 10px 0;
+      padding-left: 10px;
+      border-left: 3px solid var(--neon-green);
+    }
+    .tokenomics {
+      margin-top: 40px;
+    }
+    .alloc-list {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+    .alloc-item {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+    .swatch {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    ul li a {
+      color: var(--neon-purple);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    ul li a:hover {
+      color: var(--neon-green);
+    }
+    footer {
+      margin-top: 60px;
+      padding: 20px 0 40px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      nav {
+        display: none;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        margin-top: 10px;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
-<body class="font-body">
-  <header class="p-4 border-b border-white/10 bg-black/40 sticky top-0 z-30">
-    <div class="max-w-7xl mx-auto flex items-center gap-3">
-      <img src="assets/brand/dcktoken_avatar_512.png" class="w-10 h-10"/><h1 class="font-tag text-2xl">DCK$</h1>
-    </div>
-  </header>
-  <section class="h-56 bg-center bg-cover" style="background-image:url('assets/brand/dcktoken_banner_1500x500.png')"></section>
-  <section class="max-w-7xl mx-auto p-6">
-    <h3 class="font-tag text-4xl">The Krew</h3>
-    <div class="grid md:grid-cols-4 gap-6 mt-6">
-      <img src="assets/mascots/goldie.png"/><img src="assets/mascots/dimez.png"/><img src="assets/mascots/thicsilver.png"/><img src="assets/mascots/bronze.png.png"/>
-    </div>
-  </section>
-</body></html>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="assets/brand/dcktoken_avatar_512.png" alt="DIGITAL CURRENCY KID$" />
+        <div>
+          <div style="font-weight:900;font-size:18px">DIGITAL CURRENCY KID$</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Graffiti on the face of finance</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#crew">Crew</a>
+        <a href="#lore">Lore</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#community">Community</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>DIGITAL CURRENCY KID$</h1>
+        <p>From spray cans to blockchains — the first graffiti-inspired crypto crew flipping the system with neon tags and tokenized art.</p>
+        <div class="hero-ctas">
+          <button class="btn" onclick="scrollToSection('tokenomics')">See Tokenomics</button>
+          <button class="btn" onclick="scrollToSection('community')">Join Community</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-lineup-poster" aria-label="Crew teaser posters">
+      <div>
+        <img src="assets/mascots/goldie.png" alt="Goldie" />
+        <div class="poster-name">Goldie</div>
+      </div>
+      <div>
+        <img src="assets/mascots/thicsilver.png" alt="Thic Silver" />
+        <div class="poster-name">Thic Silver</div>
+      </div>
+      <div>
+        <img src="assets/mascots/dimez.png" alt="Dimez" />
+        <div class="poster-name">Dimez</div>
+      </div>
+      <div>
+        <img src="assets/mascots/bronze.png" alt="Big Bronze" />
+        <div class="poster-name">Big Bronze</div>
+      </div>
+    </section>
+
+    <section class="full-crew-banner" aria-label="Full crew banner">
+      <img src="assets/brand/dcktoken_banner_1500x500.png" alt="Digital Currency Kid$ Crew" />
+    </section>
+
+    <section id="crew" aria-labelledby="crew-heading">
+      <h2 id="crew-heading">Meet the Crew</h2>
+      <div class="crew-grid">
+        <div class="crew-card">
+          <img src="assets/mascots/goldie.png" alt="Goldie" />
+          <div class="crew-name-banner">Goldie</div>
+          <div class="crew-quote">"Tag it in gold, stack it in code."</div>
+          <p>The Hustler — From tagging alleys to flipping tokens, Goldie runs the playbook and keeps the crew chasing bigger wins.</p>
+        </div>
+        <div class="crew-card">
+          <img src="assets/mascots/thicsilver.png" alt="Thic Silver" />
+          <div class="crew-name-banner">Thic Silver</div>
+          <div class="crew-quote">"Brains, beauty, and blockchain."</div>
+          <p>The Shadow — Sleek strategist with Solana cap, sharp moves, and curves that flip the game. The brains holding the crew together.</p>
+        </div>
+        <div class="crew-card">
+          <img src="assets/mascots/dimez.png" alt="Dimez" />
+          <div class="crew-name-banner">Dimez</div>
+          <div class="crew-quote">"Count it twice, flip it once."</div>
+          <p>The Plug — Cash in hand, beanie low. From stacking dimes to running plays, Dimez is the plug who keeps the crew supplied.</p>
+        </div>
+        <div class="crew-card">
+          <img src="assets/mascots/bronze.png" alt="Big Bronze" />
+          <div class="crew-name-banner">Big Bronze</div>
+          <div class="crew-quote">"Stronger than steel, solid as Sol."</div>
+          <p>The Muscle — Oversized, rocking Jordans, DCK$ tat under his eye. The block in blockchain, solid and loyal to the end.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lore" aria-labelledby="lore-heading">
+      <h2 id="lore-heading">The Lore — Crew Backstories</h2>
+      <p><strong>Goldie:</strong> Raised in alleys lit by flickering street lamps, Goldie made his name tagging gold crowns on every block. When he discovered Solana, he turned that hustle digital.<br><em>"Tag it in gold, stack it in code."</em></p>
+      <p><strong>Thic Silver:</strong> Known for her sharp mind and sharper curves, she plans the crew’s every move. With her Solana cap tilted low, she’s the strategist who makes sure the crew always comes out ahead.<br><em>"Brains, beauty, and blockchain."</em></p>
+      <p><strong>Dimez:</strong> Always counting, always stacking. From flipping dimes on the corner to flipping tokens online, Dimez is the plug who knows where the cash flows.<br><em>"Count it twice, flip it once."</em></p>
+      <p><strong>Big Bronze:</strong> Towering and unshakable, Big Bronze is the wall no one gets past. Rocking Jordans and a DCK$ tat under his eye, he guards the crew’s future like he guards the block.<br><em>"Stronger than steel, solid as Sol."</em></p>
+    </section>
+
+    <section id="tokenomics" class="tokenomics" aria-labelledby="tokenomics-heading">
+      <h2 id="tokenomics-heading">Tokenomics</h2>
+      <div style="color:var(--muted);margin-bottom:10px">Total Supply: 1,000,000,000 $DCK$</div>
+      <div class="alloc-list">
+        <div class="alloc-item"><div class="swatch" style="background:var(--neon-green)"></div>40% — Community &amp; Airdrops</div>
+        <div class="alloc-item"><div class="swatch" style="background:var(--neon-purple)"></div>20% — Liquidity Pool</div>
+        <div class="alloc-item"><div class="swatch" style="background:var(--gold)"></div>15% — Crew Fund</div>
+        <div class="alloc-item"><div class="swatch" style="background:#777"></div>15% — Partnerships &amp; Alliances</div>
+        <div class="alloc-item"><div class="swatch" style="background:#333"></div>10% — Reserve</div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap" aria-labelledby="roadmap-heading">
+      <h2 id="roadmap-heading">Roadmap — The Tag Plan</h2>
+      <ul>
+        <li><strong>Phase 1:</strong> Drop website, launch crew art, community onboarding.</li>
+        <li><strong>Phase 2:</strong> Token launch on Solana, first airdrop campaign, collabs.</li>
+        <li><strong>Phase 3:</strong> Full lore drop, merch line, street-level events.</li>
+        <li><strong>Phase 4:</strong> Partnerships, expansions, and new graffiti NFTs.</li>
+      </ul>
+    </section>
+
+    <section id="community" aria-labelledby="community-heading">
+      <h2 id="community-heading">Join the Community</h2>
+      <p>Stay connected with DIGITAL CURRENCY KID$ across all channels:</p>
+      <ul>
+        <li><a href="https://t.me/PASTE_HANDLE" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://x.com/PASTE_HANDLE" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="#" rel="noopener">Discord</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>DIGITAL CURRENCY KID$ © <span id="year"></span></div>
+      <div style="font-size:12px">Built on Solana • Art meets blockchain</div>
+    </footer>
+  </div>
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
